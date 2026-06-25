@@ -1,6 +1,6 @@
 "use client";
 
-import { Menu, Navigation, Phone, X } from "lucide-react";
+import { Mail, Menu, Navigation, X } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -62,11 +62,11 @@ export function SiteHeader() {
 
         <div className="hidden items-center gap-2 md:flex">
           <a
-            href={`tel:${businessProfile.phone}`}
+            href={`mailto:${businessProfile.email}`}
             className="inline-flex h-11 items-center gap-2 rounded-full border border-black/10 bg-white/70 px-4 text-sm font-extrabold text-[#17130f] transition-colors hover:bg-white"
           >
-            <Phone size={16} aria-hidden="true" />
-            Call
+            <Mail size={16} aria-hidden="true" />
+            Email
           </a>
           <Link
             href="/directions"
@@ -103,11 +103,11 @@ export function SiteHeader() {
             ))}
             <div className="grid grid-cols-2 gap-2 pt-2">
               <a
-                href={`tel:${businessProfile.phone}`}
+                href={`mailto:${businessProfile.email}`}
                 className="inline-flex h-11 items-center justify-center gap-2 rounded-full border border-black/10 bg-white text-sm font-extrabold text-[#17130f]"
               >
-                <Phone size={16} aria-hidden="true" />
-                Call
+                <Mail size={16} aria-hidden="true" />
+                Email
               </a>
               <Link
                 href="/directions"

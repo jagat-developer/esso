@@ -3,9 +3,9 @@ import {
   BadgeCheck,
   Clock3,
   Gift,
+  Mail,
   MapPin,
   Navigation,
-  Phone,
   Star,
 } from "lucide-react";
 import Image from "next/image";
@@ -53,9 +53,9 @@ export function HomePage() {
             Premium route stop for fuel, LCBO and coffee.
           </h1>
           <p className="mt-6 max-w-xl text-lg font-medium leading-8 text-[#625a50]">
-            Esso Bloomington brings together 24-hour fuel, commercial cardlock
-            diesel, DEF, parking, LCBO Bloomington, Country Style, convenience
-            store essentials, and the client-provided samosa and pop offer.
+            Esso Bloomington brings together 24-hour fuel, retail diesel, DEF,
+            parking, LCBO convenience, Country Style, Bloomington Convenience
+            Store essentials, and the client-provided samosa and pop offer.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Link
@@ -66,17 +66,17 @@ export function HomePage() {
               <Navigation size={17} aria-hidden="true" />
             </Link>
             <a
-              href={`tel:${businessProfile.phone}`}
+              href={`mailto:${businessProfile.email}`}
               className="inline-flex h-12 items-center justify-center gap-2 rounded-full border border-black/10 bg-white/70 px-6 text-sm font-black text-[#17130f] transition-colors hover:bg-white"
             >
-              Call {businessProfile.phone.replace("+1-", "")}
-              <Phone size={17} aria-hidden="true" />
+              Email store
+              <Mail size={17} aria-hidden="true" />
             </a>
           </div>
           <div className="mt-12 grid max-w-xl grid-cols-3 gap-4">
             {[
               ["24 hr", "fuel access"],
-              ["Diesel", "cardlock + DEF"],
+              ["Diesel", "retail + DEF"],
               ["LCBO", "Bloomington"],
             ].map(([value, label]) => (
               <div key={value} className="border-l border-black/10 pl-4">
@@ -156,7 +156,7 @@ export function HomePage() {
             </h2>
             <p className="mt-4 text-base font-medium leading-7 text-[#625a50]">
               Programmatic SEO pages map every real service to a local search
-              need: gas, commercial cardlock diesel, parking, LCBO Bloomington,
+              need: gas, retail diesel, parking, LCBO Bloomington,
               Country Style, convenience store items, and the in-store offer.
             </p>
           </FadeIn>
@@ -301,8 +301,8 @@ export function HomePage() {
                 Verified business facts
               </div>
               <ul className="mt-8 grid gap-4 text-sm font-semibold leading-7 text-white/76">
-                <li>Official Esso listing confirms 5241 Bloomington Rd, 24-hour fuel, diesel, premium gas, air tower, pay-at-pump, and ATM.</li>
-                <li>Client form adds commercial cardlock diesel, Key to the Highway, Esso Fleet, DEF, parking, Beer Store, convenience store, samosas, patties, and Indian chai.</li>
+                <li>Official Esso listing confirms 5241 Bloomington Rd, 24-hour fuel, diesel, premium gas, pay-at-pump, and ATM.</li>
+                <li>Client form adds retail diesel, Key to the Highway, Esso Fleet, DEF, parking, Beer Store, LCBO convenience, Bloomington Convenience Store, air pump, vacuum, free coffee, water, can of pop, samosas, patties, and Indian chai.</li>
                 <li>Directory sources confirm Esso & LCBO Bloomington and Country Style association at the same address.</li>
               </ul>
             </FadeIn>
@@ -374,7 +374,7 @@ export function HomePage() {
                 Stop once. Handle more.
               </h2>
               <p className="mt-5 max-w-lg text-base font-medium leading-8 text-white/70">
-                Gas, commercial cardlock diesel, LCBO Bloomington, Country
+                Gas, retail diesel, LCBO Bloomington, Country
                 Style, parking, convenience store items, and a simple offer make
                 Esso Bloomington a practical stop with a premium web presence.
               </p>

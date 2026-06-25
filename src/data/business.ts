@@ -143,10 +143,10 @@ export const servicePages: ServicePage[] = [
     title: "Gas Station in Whitchurch-Stouffville",
     eyebrow: "24-hour fuel",
     description:
-      "Esso Bloomington is a gas station near Bloomington Road and Highway 48 with 24-hour fuel, premium gas, commercial cardlock diesel, parking, DEF, air, ATM, and convenience store essentials.",
+      "Esso Bloomington is a gas station near Bloomington Road and Highway 48 with 24-hour fuel, premium gas, retail diesel, parking, DEF, air, ATM, and Bloomington Convenience Store essentials.",
     h1: "Gas station near Highway 48 and Bloomington Road",
     intro:
-      "Pull in for a clean, convenient stop with 24-hour fuel access, premium gas, commercial cardlock diesel, DEF, air, ATM, LCBO liquor, Beer Store convenience, Country Style, and quick food under one practical roof.",
+      "Pull in for a clean, convenient stop with 24-hour fuel access, premium gas, retail diesel, DEF, air pump, vacuum, ATM, LCBO convenience, Beer Store, Country Style, and quick food under one practical roof.",
     image: images.fuel,
     icon: Fuel,
     color: "#e1251b",
@@ -154,7 +154,7 @@ export const servicePages: ServicePage[] = [
       "24-hour fuel access",
       "Premium gasoline available",
       "Pay at the pump",
-      "Convenience store, air tower, and ATM on site",
+      "Bloomington Convenience Store, air pump, vacuum, and ATM on site",
     ],
     seoKeywords: [
       "Esso Bloomington gas station Whitchurch-Stouffville",
@@ -178,25 +178,25 @@ export const servicePages: ServicePage[] = [
   {
     slug: "diesel-pump-whitchurch-stouffville",
     navLabel: "Diesel",
-    title: "Commercial Cardlock Diesel in Whitchurch-Stouffville",
-    eyebrow: "Cardlock diesel + DEF",
+    title: "Retail Diesel in Whitchurch-Stouffville",
+    eyebrow: "Retail diesel + DEF",
     description:
-      "Find commercial cardlock diesel, DEF, Key to the Highway, and Esso Fleet support at Esso Bloomington near Highway 48.",
-    h1: "Commercial cardlock diesel near Highway 48",
+      "Find retail diesel, DEF, Key to the Highway, and Esso Fleet support at Esso Bloomington near Highway 48.",
+    h1: "Retail diesel near Highway 48",
     intro:
-      "Esso Bloomington supports local drivers, truck drivers, fleets, and work vehicles with commercial cardlock diesel, DEF, Key to the Highway, Esso Fleet, parking, and route-ready access from Bloomington Road.",
+      "Esso Bloomington supports local drivers, truck drivers, fleets, and work vehicles with retail diesel, DEF, Key to the Highway, Esso Fleet, parking, and route-ready access from Bloomington Road.",
     image: images.diesel,
     icon: Truck,
     color: "#004a98",
     highlights: [
-      "Commercial cardlock diesel",
+      "Retail diesel",
       "Key to the Highway and Esso Fleet support",
       "DEF available",
-      "Parking, air, ATM, and convenience in one stop",
+      "Parking, air pump, vacuum, ATM, and convenience in one stop",
     ],
     seoKeywords: [
       "diesel pump Whitchurch-Stouffville",
-      "commercial cardlock diesel Stouffville",
+      "retail diesel Stouffville",
       "diesel near Highway 48",
       "DEF near Highway 48",
       "Esso Fleet Stouffville",
@@ -204,14 +204,14 @@ export const servicePages: ServicePage[] = [
     ],
     faq: [
       {
-        question: "Does Esso Bloomington have commercial cardlock diesel?",
+        question: "Does Esso Bloomington have retail diesel?",
         answer:
-          "Yes. The client-provided business details list commercial cardlock diesel, and the official Esso listing includes Synergy Diesel Efficient / Diesel.",
+          "Yes. The client-provided business details list retail diesel, and the official Esso listing includes Synergy Diesel Efficient / Diesel.",
       },
       {
         question: "Can fleet drivers use Key to the Highway or Esso Fleet?",
         answer:
-          "The client-provided details list Key to the Highway and Esso Fleet. Drivers should confirm current cardlock and fleet terms in store.",
+          "The client-provided details list Key to the Highway and Esso Fleet. Drivers should confirm current fleet terms in store.",
       },
     ],
     schemaType: "GasStation",
@@ -222,16 +222,16 @@ export const servicePages: ServicePage[] = [
     title: "Truck Parking Near Stouffville",
     eyebrow: "Route-ready stop",
     description:
-      "Esso Bloomington offers parking, commercial cardlock diesel, DEF, fuel, Country Style, and LCBO Bloomington at 5241 Bloomington Rd near Highway 48.",
-    h1: "Parking with cardlock diesel, coffee, and convenience",
+      "Esso Bloomington offers parking, retail diesel, DEF, fuel, Country Style, and LCBO Bloomington at 5241 Bloomington Rd near Highway 48.",
+    h1: "Parking with retail diesel, coffee, and convenience",
     intro:
-      "For drivers who need a practical pause near Highway 48, Esso Bloomington pairs parking with commercial cardlock diesel, DEF, gas, grab-and-go coffee, LCBO Bloomington, air, and ATM access.",
+      "For drivers who need a practical pause near Highway 48, Esso Bloomington pairs parking with retail diesel, DEF, gas, grab-and-go coffee, LCBO Bloomington, air, and ATM access.",
     image: images.truck,
     icon: ParkingCircle,
     color: "#d99a2b",
     highlights: [
       "Parking listed by client",
-      "Commercial cardlock diesel and DEF",
+      "Retail diesel and DEF",
       "Country Style coffee, donuts, sandwiches, bagels, and Indian chai",
       "Easy directions from Bloomington Road",
     ],
@@ -249,7 +249,7 @@ export const servicePages: ServicePage[] = [
       {
         question: "Can truck drivers get diesel and coffee here?",
         answer:
-          "Yes. The client details list commercial cardlock diesel, DEF, and Country Style coffee, donuts, sandwiches, bagels, and Indian chai.",
+          "Yes. The client details list retail diesel, DEF, and Country Style coffee, donuts, sandwiches, bagels, and Indian chai.",
       },
     ],
     schemaType: "LocalBusiness",
@@ -263,13 +263,13 @@ export const servicePages: ServicePage[] = [
       "LCBO Bloomington Esso at 5241 Bloomington Rd is part of the one-stop Esso Bloomington location in Stouffville.",
     h1: "LCBO Bloomington inside your one-stop route stop",
     intro:
-      "Stop for fuel, commercial cardlock diesel, Country Style, LCBO liquor, and Beer Store convenience at the same Bloomington Road address. It is built for quick errands without adding another stop to the route.",
+      "Stop for fuel, retail diesel, Country Style, LCBO convenience, Beer Store, and Bloomington Convenience Store at the same Bloomington Road address. It is built for quick errands without adding another stop to the route.",
     image: images.lcbo,
     icon: Beer,
     color: "#a36b12",
     highlights: [
       "LCBO Bloomington association verified by directory sources",
-      "LCBO liquor and Beer Store convenience",
+      "LCBO convenience and Beer Store",
       "Same address as Esso Bloomington",
       "Hours may vary; verify in store",
     ],
@@ -380,18 +380,19 @@ export const allPages = [...servicePages, offerPage];
 
 export const amenities = [
   { label: "24-hour fuel", icon: Fuel },
-  { label: "Commercial cardlock diesel", icon: Truck },
+  { label: "Retail diesel", icon: Truck },
   { label: "Key to the Highway", icon: ShieldCheck },
   { label: "Esso Fleet", icon: Fuel },
   { label: "DEF", icon: Wind },
   { label: "Parking", icon: ParkingCircle },
-  { label: "LCBO Bloomington", icon: Beer },
-  { label: "Beer Store convenience", icon: Beer },
-  { label: "Convenience store", icon: ShieldCheck },
+  { label: "LCBO convenience", icon: Beer },
+  { label: "Beer Store", icon: Beer },
+  { label: "Bloomington Convenience Store", icon: ShieldCheck },
   { label: "Country Style", icon: Coffee },
+  { label: "Free coffee, water, can of pop", icon: Gift },
   { label: "Donuts, sandwiches, bagels", icon: Coffee },
   { label: "Samosas, patties, Indian chai", icon: Gift },
-  { label: "Air tower", icon: Wind },
+  { label: "Air pump / vacuum", icon: Wind },
   { label: "ATM", icon: ShieldCheck },
   { label: "Directions ready", icon: MapPin },
 ];
@@ -405,7 +406,7 @@ export const homeFaq = [
   {
     question: "What fuel is available?",
     answer:
-      "The official Esso listing includes Synergy Diesel Efficient / Diesel and Synergy Supreme+ Premium Gasoline. Client details add commercial cardlock diesel, DEF, Key to the Highway, and Esso Fleet.",
+      "The official Esso listing includes Synergy Diesel Efficient / Diesel and Synergy Supreme+ Premium Gasoline. Client details add retail diesel, DEF, Key to the Highway, and Esso Fleet.",
   },
   {
     question: "Does the location have parking?",
@@ -415,7 +416,7 @@ export const homeFaq = [
   {
     question: "What food and convenience items are listed?",
     answer:
-      "The client form lists Country Style coffee, donuts, sandwiches, bagels, samosas, patties, Indian chai, LCBO liquor, Beer Store convenience, and a convenience store.",
+      "The client form lists free coffee, water, can of pop, Country Style coffee, donuts, sandwiches, bagels, samosas, patties, Indian chai, LCBO convenience, Beer Store, and Bloomington Convenience Store.",
   },
   {
     question: "What are the offer terms?",

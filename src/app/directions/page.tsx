@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ArrowRight, Clock3, MapPin, Navigation, Phone } from "lucide-react";
+import { ArrowRight, Clock3, Mail, MapPin, Navigation } from "lucide-react";
 import Link from "next/link";
 import { FadeIn } from "@/components/animated";
 import { JsonLd } from "@/components/json-ld";
@@ -54,18 +54,18 @@ export default function DirectionsPage() {
               <Navigation size={17} aria-hidden="true" />
             </a>
             <a
-              href={`tel:${businessProfile.phone}`}
+              href={`mailto:${businessProfile.email}`}
               className="inline-flex h-12 items-center justify-center gap-2 rounded-full border border-black/10 bg-white/70 px-6 text-sm font-black text-[#17130f] hover:bg-white"
             >
-              Call first
-              <Phone size={17} aria-hidden="true" />
+              Email store
+              <Mail size={17} aria-hidden="true" />
             </a>
           </div>
           <div className="mt-10 grid gap-3 sm:grid-cols-2">
             {[
               ["Fuel", "24-hour access listed by Esso"],
               ["LCBO", "Hours may vary; verify in store"],
-              ["Diesel", "Commercial cardlock diesel, DEF, and fleet programs listed by client"],
+              ["Diesel", "Retail diesel, DEF, and fleet programs listed by client"],
               ["Offer", "Ask in store for current terms"],
             ].map(([label, value]) => (
               <div
@@ -138,7 +138,7 @@ export default function DirectionsPage() {
                 More than directions.
               </h2>
               <p className="mt-4 max-w-2xl text-sm font-medium leading-7 text-white/70">
-                View the full service pages for gas, commercial cardlock diesel,
+                View the full service pages for gas, retail diesel,
                 parking, LCBO Bloomington, Country Style, and the current
                 in-store offer.
               </p>

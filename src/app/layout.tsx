@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     template: `%s | ${businessProfile.name}`,
   },
   description:
-    "Esso Bloomington at Highway 48 and Bloomington Road in Stouffville offers 24-hour fuel, premium gas, commercial cardlock diesel, DEF, Key to the Highway, Esso Fleet, LCBO Bloomington, Country Style, convenience store items, and a limited-time samosa and pop offer.",
+    "Esso Bloomington at Highway 48 and Bloomington Road in Stouffville offers 24-hour fuel, premium gas, retail diesel, DEF, Key to the Highway, Esso Fleet, LCBO Bloomington, Country Style, convenience store items, and a limited-time samosa and pop offer.",
   alternates: {
     canonical: "/",
   },
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${businessProfile.name} | Gas, Diesel, LCBO & Country Style`,
     description:
-      "A refined, practical stop for fuel, commercial cardlock diesel, DEF, LCBO Bloomington, Country Style, parking, and quick convenience.",
+      "A refined, practical stop for fuel, retail diesel, DEF, LCBO Bloomington, Country Style, parking, and quick convenience.",
   },
 };
 

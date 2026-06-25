@@ -1,4 +1,4 @@
-import { ArrowUpRight, Mail, MapPin, Phone } from "lucide-react";
+import { ArrowUpRight, Mail, MapPin } from "lucide-react";
 import Link from "next/link";
 import { businessProfile, servicePages } from "@/data/business";
 
@@ -13,17 +13,17 @@ export function SiteFooter() {
             {businessProfile.name}
           </div>
           <p className="mt-4 max-w-md text-sm leading-7 text-white/70">
-            Fuel, commercial cardlock diesel, DEF, parking, LCBO Bloomington,
+            Fuel, retail diesel, DEF, parking, LCBO Bloomington,
             Country Style, convenience store items, and practical route
             convenience at {address.street}, {address.locality}.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             <a
-              href={`tel:${businessProfile.phone}`}
+              href={`mailto:${businessProfile.email}`}
               className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-extrabold text-[#17130f]"
             >
-              <Phone size={16} aria-hidden="true" />
-              {businessProfile.phone.replace("+1-", "")}
+              <Mail size={16} aria-hidden="true" />
+              Email store
             </a>
             <a
               href={businessProfile.mapUrl}
@@ -33,13 +33,6 @@ export function SiteFooter() {
             >
               <MapPin size={16} aria-hidden="true" />
               Open map
-            </a>
-            <a
-              href={`mailto:${businessProfile.email}`}
-              className="inline-flex items-center gap-2 rounded-full border border-white/20 px-4 py-2 text-sm font-extrabold text-white transition-colors hover:bg-white/10"
-            >
-              <Mail size={16} aria-hidden="true" />
-              Email
             </a>
           </div>
         </div>
