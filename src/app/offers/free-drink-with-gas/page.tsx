@@ -7,6 +7,6 @@ const path = `/offers/${offerPage.slug}`;
 
 export const metadata: Metadata = pageMetadata(offerPage, path);
 
-export default function FreeSamosaPopOfferPage() {
+export default function FreeDrinkWithGasOfferPage() {
   return <ServicePageTemplate page={offerPage} path={path} isOffer />;
 }

@@ -1,5 +1,6 @@
 import type { LucideIcon } from "lucide-react";
 import {
+  BadgeCheck,
   Beer,
   Coffee,
   Fuel,
@@ -50,7 +51,7 @@ export const businessProfile: BusinessProfile = {
     "Esso & LCBO Bloomington",
     "LCBO Bloomington Esso",
   ],
-  phone: "+1-647-773-9572",
+  phone: "+1-905-640-1076",
   stationPhone: "+1-905-640-1076",
   email: "vpetroinc@gmail.com",
   contactName: "Jay Bhatia",
@@ -336,41 +337,47 @@ export const servicePages: ServicePage[] = [
 ];
 
 export const offerPage: ServicePage = {
-  slug: "free-samosa-pop-with-gas",
+  slug: "free-drink-with-gas",
   navLabel: "Offer",
-  title: "Free Samosa and Pop With Gas Purchase",
+  title: "Free Coffee, Water, or Pop on $60+ Spend",
   eyebrow: "Limited-time offer",
   description:
-    "Ask in store about the client-provided free samosa and can of pop offer with gas purchase at Esso Bloomington.",
-  h1: "Free samosa and can of pop with gas purchase",
+    "Spend $60 or more at Esso Bloomington and pick up a free coffee, bottled water, or can of pop on us. Limited-time offer at Bloomington Road and Highway 48.",
+  h1: "Free coffee, water, or can of pop on a $60+ spend",
   intro:
-    "Make the stop feel a little better: customers can ask in store about a free samosa and can of pop with gas purchase while the offer is active and supplies last. Client details also list samosas, patties, and Indian chai among the quick food options.",
-  image: images.offer,
+    "Spend $60 or more on fuel or in store and we will treat you to a free coffee, bottled water, or can of pop. It is our small way of thanking drivers and truckers who stop at Bloomington Road and Highway 48 — ask the attendant or staff inside to redeem.",
+  image: images.countryStyle,
   icon: Gift,
   color: "#e1251b",
   highlights: [
-    "Client-provided promotional offer",
-    "Gas purchase required",
-    "Samosas, patties, and Indian chai listed by client",
-    "Ask in store for terms",
-    "Limited-time and while supplies last",
+    "Free coffee, bottled water, or can of pop",
+    "On any $60+ spend in store or at the pump",
+    "Promotion for all customers — local drivers and truckers welcome",
+    "Ask the attendant or in-store staff to redeem",
+    "Limited-time offer while supplies last",
   ],
   seoKeywords: [
-    "free samosa with gas purchase",
+    "free coffee with gas Stouffville",
+    "free pop with fuel Bloomington Road",
     "Esso Bloomington offer",
-    "patties Indian chai Stouffville",
-    "gas station samosa pop Stouffville",
+    "gas station promotion Highway 48",
+    "trucker promotion Whitchurch-Stouffville",
   ],
   faq: [
     {
-      question: "How do I get the free samosa and pop offer?",
+      question: "How do I get the free coffee, water, or pop offer?",
       answer:
-        "Ask in store when purchasing gas. The offer is treated as limited-time, while supplies last, and subject to store terms.",
+        "Spend $60 or more on fuel or in store at Esso Bloomington and ask the attendant or staff inside to redeem your free coffee, bottled water, or can of pop. The offer is treated as limited-time, while supplies last, and subject to store terms.",
     },
     {
-      question: "Is the samosa and pop offer available every day?",
+      question: "Does the $60 spend have to be on fuel?",
       answer:
-        "Availability can change. The website presents the offer conservatively and asks customers to confirm current terms in store.",
+        "No. Any combined $60+ spend at the pump or in the store qualifies — fuel, convenience items, Country Style, or LCBO Bloomington purchases all count toward the threshold.",
+    },
+    {
+      question: "Is the free drink offer available every day?",
+      answer:
+        "Availability can change without notice. The website presents the offer conservatively and asks customers to confirm current terms in store.",
     },
   ],
   schemaType: "FoodEstablishment",
@@ -386,13 +393,14 @@ export const amenities = [
   { label: "DEF", icon: Wind },
   { label: "Parking", icon: ParkingCircle },
   { label: "LCBO convenience", icon: Beer },
-  { label: "Beer Store", icon: Beer },
-  { label: "Bloomington Convenience Store", icon: ShieldCheck },
+  { label: "Beer Store convenience", icon: Beer },
+  { label: "Bloomington Convenience store", icon: ShieldCheck },
   { label: "Country Style", icon: Coffee },
-  { label: "Free coffee, water, can of pop", icon: Gift },
+  { label: "PC Optimum points on fuel", icon: BadgeCheck },
+  { label: "Free coffee / water / can of pop", icon: Gift },
   { label: "Donuts, sandwiches, bagels", icon: Coffee },
   { label: "Samosas, patties, Indian chai", icon: Gift },
-  { label: "Air pump / vacuum", icon: Wind },
+  { label: "Air tower — air pump / vacuum", icon: Wind },
   { label: "ATM", icon: ShieldCheck },
   { label: "Directions ready", icon: MapPin },
 ];
@@ -421,6 +429,11 @@ export const homeFaq = [
   {
     question: "What are the offer terms?",
     answer:
-      "The free samosa and can of pop promotion is presented as a client-provided, limited-time offer with gas purchase. Customers should ask in store for current terms.",
+      "Spend $60 or more at Esso Bloomington and ask the attendant or in-store staff for your free coffee, bottled water, or can of pop. It is a limited-time offer while supplies last; confirm current terms in store.",
+  },
+  {
+    question: "Can I earn PC Optimum points on fuel here?",
+    answer:
+      "Yes. As an Esso and Mobil location, Esso Bloomington participates in the PC Optimum program — present or scan your PC Optimum card at the pump or inside to earn points on every litre of gas or diesel, and redeem points toward groceries, fuel, and more at participating retailers.",
   },
 ];

@@ -1,10 +1,13 @@
 "use client";
 
-import { Mail, Menu, Navigation, X } from "lucide-react";
+import { Mail, Menu, Navigation, Phone, X } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { businessProfile } from "@/data/business";
+
+const telHref = `tel:${businessProfile.phone.replace(/[^+\d]/g, "")}`;
 
 const navItems = [
   { href: "/gas-station-whitchurch-stouffville", label: "Gas" },
@@ -12,7 +15,7 @@ const navItems = [
   { href: "/truck-parking-whitchurch-stouffville", label: "Parking" },
   { href: "/lcbo-bloomington", label: "LCBO" },
   { href: "/country-style", label: "Country Style" },
-  { href: "/offers/free-samosa-pop-with-gas", label: "Offer" },
+  { href: "/offers/free-drink-with-gas", label: "Offer" },
 ];
 
 export function SiteHeader() {
@@ -28,17 +31,14 @@ export function SiteHeader() {
           aria-label={`${businessProfile.name} home`}
           onClick={() => setIsOpen(false)}
         >
-          <span className="grid h-9 w-9 place-items-center rounded-[8px] bg-[#e1251b] text-sm font-black text-white shadow-lg shadow-red-900/15">
-            E
-          </span>
-          <span className="leading-none">
-            <span className="display-type block text-lg font-black text-[#17130f]">
-              {businessProfile.name}
-            </span>
-            <span className="mt-1 block text-xs font-bold uppercase tracking-[0.12em] text-[#625a50]">
-              LCBO + Country Style
-            </span>
-          </span>
+          <Image
+            src="/brand/esso-mobil.webp"
+            alt={`${businessProfile.name} — Esso and Mobil`}
+            width={360}
+            height={120}
+            priority
+            className="h-14 w-auto sm:h-16"
+          />
         </Link>
 
         <nav className="hidden items-center gap-1 lg:flex" aria-label="Primary">
@@ -62,11 +62,18 @@ export function SiteHeader() {
 
         <div className="hidden items-center gap-2 md:flex">
           <a
-            href={`mailto:${businessProfile.email}`}
+            href={telHref}
             className="inline-flex h-11 items-center gap-2 rounded-full border border-black/10 bg-white/70 px-4 text-sm font-extrabold text-[#17130f] transition-colors hover:bg-white"
           >
+            <Phone size={16} aria-hidden="true" />
+            905-640-1076
+          </a>
+          <a
+            href={`mailto:${businessProfile.email}`}
+            className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-black/10 bg-white/70 text-[#17130f] transition-colors hover:bg-white"
+            aria-label="Email store"
+          >
             <Mail size={16} aria-hidden="true" />
-            Email
           </a>
           <Link
             href="/directions"
@@ -101,6 +108,14 @@ export function SiteHeader() {
                 {item.label}
               </Link>
             ))}
+            <a
+              href={telHref}
+              className="inline-flex h-11 items-center justify-center gap-2 rounded-full bg-[#e1251b] text-sm font-extrabold text-white"
+              onClick={() => setIsOpen(false)}
+            >
+              <Phone size={16} aria-hidden="true" />
+              Call 905-640-1076
+            </a>
             <div className="grid grid-cols-2 gap-2 pt-2">
               <a
                 href={`mailto:${businessProfile.email}`}

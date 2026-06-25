@@ -6,6 +6,8 @@ import {
   Mail,
   MapPin,
   Navigation,
+  Phone,
+  Sparkles,
   Star,
 } from "lucide-react";
 import Image from "next/image";
@@ -33,6 +35,7 @@ import {
 export function HomePage() {
   const address = businessProfile.address;
   const primaryServices = servicePages.slice(0, 5);
+  const telHref = `tel:${businessProfile.phone.replace(/[^+\d]/g, "")}`;
 
   return (
     <main>
@@ -55,9 +58,10 @@ export function HomePage() {
           <p className="mt-6 max-w-xl text-lg font-medium leading-8 text-[#625a50]">
             Esso Bloomington brings together 24-hour fuel, retail diesel, DEF,
             parking, LCBO convenience, Country Style, Bloomington Convenience
-            Store essentials, and the client-provided samosa and pop offer.
+            store essentials, PC Optimum points on fuel, and a free coffee,
+            water, or can of pop on every $60+ spend.
           </p>
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <Link
               href="/directions"
               className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-[#17130f] px-6 text-sm font-black text-white shadow-xl shadow-black/10 transition-colors hover:bg-[#004a98]"
@@ -65,6 +69,13 @@ export function HomePage() {
               Get directions
               <Navigation size={17} aria-hidden="true" />
             </Link>
+            <a
+              href={telHref}
+              className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-[#e1251b] px-6 text-sm font-black text-white shadow-xl shadow-red-900/15 transition-colors hover:bg-[#b21d15]"
+            >
+              <Phone size={17} aria-hidden="true" />
+              Call 905-640-1076
+            </a>
             <a
               href={`mailto:${businessProfile.email}`}
               className="inline-flex h-12 items-center justify-center gap-2 rounded-full border border-black/10 bg-white/70 px-6 text-sm font-black text-[#17130f] transition-colors hover:bg-white"
@@ -105,8 +116,8 @@ export function HomePage() {
                 </div>
               </div>
               <ImageCard
-                image={images.offer}
-                label="Samosa + pop"
+                image={images.countryStyle}
+                label="Free drink on $60+"
                 priority
                 className="h-64"
               />
@@ -127,7 +138,7 @@ export function HomePage() {
                     Free
                   </div>
                   <div className="mt-2 text-sm font-bold leading-5">
-                    samosa and can of pop with gas purchase
+                    coffee / water / can of pop on a $60+ spend
                   </div>
                 </div>
                 <div className="rounded-[8px] bg-[#ffd967] p-5 text-[#17130f] shadow-xl shadow-yellow-900/10">
@@ -207,11 +218,12 @@ export function HomePage() {
               </div>
               <h3 className="mt-8 text-xl font-black">{offerPage.title}</h3>
               <p className="mt-3 min-h-24 text-sm font-medium leading-7 text-white/70">
-                Ask in store about the limited-time free samosa and pop offer
-                with gas purchase. While supplies last.
+                Spend $60 or more at Esso Bloomington and pick up a free
+                coffee, bottled water, or can of pop on us. Limited-time
+                offer while supplies last.
               </p>
               <Link
-                href="/offers/free-samosa-pop-with-gas"
+                href="/offers/free-drink-with-gas"
                 className="mt-6 inline-flex items-center gap-2 text-sm font-black text-white"
               >
                 View offer
@@ -253,6 +265,107 @@ export function HomePage() {
               );
             })}
           </div>
+        </div>
+      </section>
+
+      <section className="section-pad">
+        <div className="site-shell grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+          <FadeIn>
+            <div className="eyebrow">Seen on the highway</div>
+            <h2 className="display-type mt-5 text-4xl font-black leading-tight sm:text-5xl">
+              The signage you spot from Highway 48.
+            </h2>
+            <p className="mt-5 text-base font-medium leading-8 text-[#625a50]">
+              Free coffee, water, or pop on a $60+ spend. Hot food for the road
+              — patties, samosas, and fresh Indian chai. New management and a
+              fully renovated store at Bloomington and Highway 48.
+            </p>
+            <div className="mt-6 grid gap-2 text-sm font-semibold text-[#3e372f] sm:grid-cols-2">
+              {[
+                "Gas, Diesel, Retail Cardlock",
+                "LCBO + Beer Store + ATM",
+                "Free drink on $60+ spend",
+                "Hot patties, chai, samosas",
+              ].map((line) => (
+                <div
+                  key={line}
+                  className="rounded-[8px] border border-black/10 bg-white/70 px-3 py-2"
+                >
+                  {line}
+                </div>
+              ))}
+            </div>
+          </FadeIn>
+          <FloatIn delay={0.08}>
+            <div className="overflow-hidden rounded-[8px] border border-black/10 bg-white shadow-2xl shadow-black/10">
+              <Image
+                src="/billboards/bloomington-billboards.jpeg"
+                alt="Esso Bloomington billboard adverts — gas, diesel, retail cardlock; free coffee, water, or pop on $60+ spend; LCBO, Beer Store, ATM, Country Style, Lotto 649, Lotto Max; new management and renovated; hot food items including patties, chai, and samosas."
+                width={1268}
+                height={1391}
+                className="h-auto w-full"
+                sizes="(min-width: 1024px) 540px, 100vw"
+              />
+            </div>
+          </FloatIn>
+        </div>
+      </section>
+
+      <section className="section-pad pt-0">
+        <div className="site-shell">
+          <FadeIn className="overflow-hidden rounded-[8px] bg-gradient-to-br from-[#a36b12] via-[#7c4d0a] to-[#3a2406] p-8 text-white shadow-2xl shadow-black/20 sm:p-12">
+            <div className="grid items-center gap-8 lg:grid-cols-[1.1fr_0.9fr]">
+              <div>
+                <div className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-3 py-1 text-xs font-black uppercase tracking-[0.16em] text-white">
+                  <Sparkles size={14} aria-hidden="true" />
+                  PC Optimum
+                </div>
+                <h2 className="display-type mt-5 max-w-xl text-4xl font-black leading-tight sm:text-5xl">
+                  Earn PC Optimum points every fill-up.
+                </h2>
+                <p className="mt-5 max-w-xl text-base font-medium leading-8 text-white/80">
+                  Esso and Mobil stations participate in the PC Optimum rewards
+                  program. Scan your card or app at the pump or inside the store
+                  to earn points on every litre of gas or diesel, then redeem
+                  toward groceries, fuel, and more at participating retailers.
+                </p>
+                <div className="mt-6 flex flex-wrap gap-3 text-sm font-black">
+                  <a
+                    href={telHref}
+                    className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-white px-6 text-[#7c4d0a]"
+                  >
+                    <Phone size={16} aria-hidden="true" />
+                    Call to learn more
+                  </a>
+                  <a
+                    href="https://www.esso.ca/en-ca/personal/pc-optimum"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex h-12 items-center justify-center gap-2 rounded-full border border-white/30 px-6 text-white transition-colors hover:bg-white/10"
+                  >
+                    Program details
+                    <ArrowRight size={16} aria-hidden="true" />
+                  </a>
+                </div>
+              </div>
+              <div className="grid gap-3 text-sm font-semibold text-white/85">
+                {[
+                  "Earn points on every litre of gas or diesel",
+                  "Bonus offers shown in the PC Optimum app",
+                  "Redeem at Loblaws, Shoppers, and Esso",
+                  "Card, app, or key-tag — bring whichever you carry",
+                ].map((line) => (
+                  <div
+                    key={line}
+                    className="flex gap-3 rounded-[8px] border border-white/15 bg-white/5 p-3"
+                  >
+                    <BadgeCheck size={18} className="mt-0.5 shrink-0 text-[#ffd967]" aria-hidden="true" />
+                    <span>{line}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </FadeIn>
         </div>
       </section>
 
@@ -379,7 +492,7 @@ export function HomePage() {
                 Esso Bloomington a practical stop with a premium web presence.
               </p>
               <Link
-                href="/offers/free-samosa-pop-with-gas"
+                href="/offers/free-drink-with-gas"
                 className="mt-7 inline-flex h-12 w-fit items-center justify-center gap-2 rounded-full bg-white px-6 text-sm font-black text-[#17130f]"
               >
                 See the offer

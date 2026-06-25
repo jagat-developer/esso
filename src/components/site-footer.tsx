@@ -1,9 +1,10 @@
-import { ArrowUpRight, Mail, MapPin } from "lucide-react";
+import { ArrowUpRight, Mail, MapPin, Phone } from "lucide-react";
 import Link from "next/link";
 import { businessProfile, servicePages } from "@/data/business";
 
 export function SiteFooter() {
   const address = businessProfile.address;
+  const telHref = `tel:${businessProfile.phone.replace(/[^+\d]/g, "")}`;
 
   return (
     <footer className="border-t border-black/10 bg-[#17130f] text-white">
@@ -18,6 +19,13 @@ export function SiteFooter() {
             convenience at {address.street}, {address.locality}.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
+            <a
+              href={telHref}
+              className="inline-flex items-center gap-2 rounded-full bg-[#e1251b] px-4 py-2 text-sm font-extrabold text-white"
+            >
+              <Phone size={16} aria-hidden="true" />
+              905-640-1076
+            </a>
             <a
               href={`mailto:${businessProfile.email}`}
               className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-extrabold text-[#17130f]"
@@ -52,10 +60,10 @@ export function SiteFooter() {
               </Link>
             ))}
             <Link
-              href="/offers/free-samosa-pop-with-gas"
+              href="/offers/free-drink-with-gas"
               className="text-sm font-bold text-white/76 transition-colors hover:text-white"
             >
-              Free samosa and pop offer
+              Free coffee, water, or pop on $60+ spend
             </Link>
           </div>
         </div>
