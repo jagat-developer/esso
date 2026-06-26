@@ -136,6 +136,68 @@ select {
   filter: saturate(0.92) contrast(1.02);
 }
 
+.blog-content {
+  color: #2a241e;
+  font-size: 1.06rem;
+  font-weight: 500;
+  line-height: 1.9;
+}
+
+.blog-content > * + * {
+  margin-top: 1.35rem;
+}
+
+.blog-content h2,
+.blog-content h3,
+.blog-content h4 {
+  color: #17130f;
+  font-weight: 900;
+  letter-spacing: 0;
+  line-height: 1.12;
+}
+
+.blog-content h2 {
+  margin-top: 2.8rem;
+  font-size: clamp(2rem, 4vw, 3.25rem);
+}
+
+.blog-content h3 {
+  margin-top: 2.2rem;
+  font-size: clamp(1.45rem, 3vw, 2.1rem);
+}
+
+.blog-content a {
+  color: #004a98;
+  font-weight: 800;
+  text-decoration: underline;
+  text-decoration-color: rgba(0, 74, 152, 0.25);
+  text-underline-offset: 0.22em;
+}
+
+.blog-content ul,
+.blog-content ol {
+  padding-left: 1.35rem;
+}
+
+.blog-content li + li {
+  margin-top: 0.55rem;
+}
+
+.blog-content blockquote {
+  border-left: 4px solid var(--esso-red);
+  background: rgba(255, 253, 248, 0.72);
+  padding: 1rem 1.25rem;
+  color: #3e372f;
+  font-weight: 700;
+}
+
+.blog-content img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

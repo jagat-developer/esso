@@ -175,6 +175,7 @@ export function offerSchema() {
 export function allRoutePaths() {
   return [
     "/",
+    "/blog",
     "/directions",
     ...allPages.map((page) =>
       page.slug === offerPage.slug ? `/offers/${page.slug}` : `/${page.slug}`,

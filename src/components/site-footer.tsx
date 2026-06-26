@@ -65,6 +65,12 @@ export function SiteFooter() {
             >
               Free coffee, water, or pop on $60+ spend
             </Link>
+            <Link
+              href="/blog"
+              className="text-sm font-bold text-white/76 transition-colors hover:text-white"
+            >
+              Blog
+            </Link>
           </div>
         </div>
 
